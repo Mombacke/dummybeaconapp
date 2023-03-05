@@ -83,7 +83,6 @@ class MainActivity : AppCompatActivity(), KBeaconsMgr.KBeaconMgrDelegate, ConnSt
                 REQUEST_BLUETOOTH_PERMISSIONS
             )
         }else {
-            button.setOnClickListener {
                 mBeaconsMgr.delegate = this
                 val nStartScan = mBeaconsMgr.startScanning()
 
@@ -104,7 +103,6 @@ class MainActivity : AppCompatActivity(), KBeaconsMgr.KBeaconMgrDelegate, ConnSt
                     Toast.makeText(this, "BLE scanning unknown error", Toast.LENGTH_LONG).show()
                 }
             }
-        }
 
     }
 
